@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>So you need a client side testing solution..</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<a href="https://github.com/garann/template-chooser" class="forkme"><img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+		<h1>Testing-Framework-Chooser!</h1>
+		<h3>Cloned from <a href="http://garann.github.io/template-chooser/">Template-Engine-Chooser!</a></h3>
+		<div class="criteria">
+			<fieldset>
+				<legend>Do you want unit or integration testing?</legend>
+				<label>unit <input type="radio" name="radSide" value="unit" /></label>
+				<label>integration <input type="radio" name="radSide" value="integration" /></label>
+				<!-- <label>both <input type="radio" name="radSide" value="unit.integration" /></label> -->
+			</fieldset>
+			<fieldset>
+				<legend>Should it use behavioral driven style syntax?</legend>
+				<label>yes <input type="radio" name="radBdd" value="bdd" /></label>
+				<label>no <input type="radio" name="radBdd" value="" /></label>
+			</fieldset>
+			<fieldset>
+				<legend>Does it need to have a Grunt.js task?</legend>
+				<label>yes <input type="radio" name="radGrunt" value="grunt" /></label>
+				<label>no <input type="radio" name="radGrunt" value="" /></label>
+			</fieldset>
+		</div>
+		<div class="engines"></div>
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="doT.min.js"></script>
+	<script src="script.js"></script>
+	<script id="tmplsTmpl" type="text/tmpl">
+	{{~it.all :item}}
+			<div class="add {{=item.traits.join( ' ' ) }}">
+				<h2>{{=item.name}}</h2>
+				<a href="{{=item.link}}">{{=item.link_text}}</a>&nbsp;
+				{{? item.grunt.length }}
+					<a href="{{=item.grunt}}">grunt task</a>
+				{{?}}
+				{{? item.size.length }}
+					<span>({{=item.size}})</span>
+				{{?}}
+			</div>
+	{{~}}
+	</script>
+</html>
