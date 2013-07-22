@@ -32,20 +32,12 @@ var engines = [
 			traits: [ "unit" ]
 		},
 		{
-			name: "FuncUnit",
-			link: "http://funcunit.com/",
-			link_text: "project",
-			size: "",
-			grunt: "https://github.com/alexisabril/grunt-funcunit",
-			traits: [ "integration", "grunt" ]
-		},
-		{
 			name: "Buster.js",
 			link: "http://docs.busterjs.org/en/latest/",
 			link_text: "project",
 			size: "",
 			grunt: "",
-			traits: [ "unit" ]
+			traits: [ "unit", "bdd" ]
 		},
 		{
 			name: "JsTestDriver",
@@ -54,6 +46,14 @@ var engines = [
 			size: "",
 			grunt: "",
 			traits: [ "unit" ]
+		},
+		{
+			name: "FuncUnit",
+			link: "http://funcunit.com/",
+			link_text: "project",
+			size: "",
+			grunt: "https://github.com/alexisabril/grunt-funcunit",
+			traits: [ "integration", "grunt" ]
 		},
 		{
 			name: "CasperJS",
